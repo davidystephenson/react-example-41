@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // const ReactDOM = require('react-dom')
-import './index.css';
 import App from './App';
 // const App = require('./App.js')
-import * as serviceWorker from './serviceWorker';
 
+// Build the jsx returned from the App.js function
+const app = <React.StrictMode>
+  <App />
+</React.StrictMode>
+
+// find the first element on the page
+// with the id 'root'
+const root = document.getElementById('root')
+
+// Inserts the App jsx into the root element
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  app,
+  root  
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
