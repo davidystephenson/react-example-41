@@ -2,25 +2,23 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Heading from './components/Heading'
+import Welcome from './components/Welcome'
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const teacher = 'david'
+  const teacher2 = 'rein'
+  const teacher3 = 'jeroen'
+
+  return <div>
+    <Heading />
+
+    <Welcome teacher='kelley!' />
+    <Welcome teacher={teacher} />
+    <Welcome teacher={teacher2} />
+    <Welcome teacher={teacher3} />
+  </div>
 }
 
 export default App;
+// module.exports = App
